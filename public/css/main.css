@@ -11,29 +11,6 @@ a {
   color: black;
 }
 
-button {
-  margin-top: 2rem;
-  padding: 1rem 1rem;
-  border-radius: 50px;
-  border: none;
-  -webkit-box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(175deg, #dd79da 43%, #9356dc 100%);
-  -webkit-transition: opacity ease-in-out 200ms, -webkit-box-shadow ease-in-out 200ms;
-  transition: opacity ease-in-out 200ms, -webkit-box-shadow ease-in-out 200ms;
-  transition: opacity ease-in-out 200ms, box-shadow ease-in-out 200ms;
-  transition: opacity ease-in-out 200ms, box-shadow ease-in-out 200ms, -webkit-box-shadow ease-in-out 200ms;
-}
-button > a {
-  font-weight: 500;
-  color: white;
-}
-button:hover {
-  -webkit-box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.25);
-  opacity: 0.93;
-}
-
 .header__logo {
   padding: 1rem 0;
   text-align: center;
@@ -45,6 +22,11 @@ button:hover {
 .header__logo > .site-name {
   font-family: "Shrikhand", cursive;
   font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .localisation {
@@ -81,6 +63,7 @@ button:hover {
 
 .welcome {
   background-color: #f6f6f6;
+  padding-bottom: 2rem;
 }
 .welcome__text {
   padding: 1.5rem 0;
@@ -109,6 +92,74 @@ button:hover {
 
 .fonctionnement {
   margin-top: 3rem;
-  padding-left: 1rem;
+  padding: 0 1.2rem;
   font-weight: 900;
+}
+.fonctionnement > ol {
+  counter-reset: fonctionnalities;
+  list-style: none;
+  margin-top: 1.4rem;
+}
+.fonctionnement > ol li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #f4f4f4;
+  font-weight: 500;
+  position: relative;
+  padding: 1.7rem 0;
+  border-radius: 21px;
+  margin-bottom: 2rem;
+  margin-left: 0.8rem;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.fonctionnement > ol li::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  counter-increment: fonctionnalities;
+  content: counter(fonctionnalities);
+  position: absolute;
+  left: -0.8rem;
+  background-color: #9356dc;
+  color: white;
+  font-size: 0.8rem;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.link-as-button {
+  margin-top: 2rem;
+  padding: 1rem 1rem;
+  border-radius: 50px;
+  border: none;
+  -webkit-box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(175deg, #dd79da 43%, #9356dc 100%);
+  -webkit-transition: opacity ease-in-out 200ms, -webkit-box-shadow ease-in-out 200ms;
+  transition: opacity ease-in-out 200ms, -webkit-box-shadow ease-in-out 200ms;
+  transition: opacity ease-in-out 200ms, box-shadow ease-in-out 200ms;
+  transition: opacity ease-in-out 200ms, box-shadow ease-in-out 200ms, -webkit-box-shadow ease-in-out 200ms;
+  font-weight: 500;
+  color: white;
+}
+.link-as-button:hover {
+  -webkit-box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.25);
+  opacity: 0.93;
 }
