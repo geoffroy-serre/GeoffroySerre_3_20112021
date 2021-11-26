@@ -1,0 +1,15 @@
+.header {
+	&__logo {
+		padding: 1rem 0;
+		text-align: center;
+		background-color: white;
+		position: sticky;
+
+		@include drop-shadow;
+
+		& > .site-name {
+			@include ohmyfood-name;
+			font-size: 1.8rem;
+		}
+	}
+}

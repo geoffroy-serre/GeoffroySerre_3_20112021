@@ -1,1 +1,50 @@
 // Home page style
+.localisation {
+	padding: 0.9rem 0;
+	background-color: $gray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	& > .localisation__block {
+		color: lighten(black, 25);
+		display: flex;
+		align-items: baseline;
+		justify-content: center;
+
+		& > span {
+			margin-right: 30px;
+			margin-left: 15px;
+			font-size: 0.95rem;
+			font-weight: 500;
+		}
+	}
+}
+
+.welcome {
+	background-color: $light-gray;
+	&__text {
+		padding: 1.5rem 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		& > h1 {
+			font-size: 1.5rem;
+			font-weight: 900;
+			width: 70%;
+		}
+		& > p {
+			color: darken(gray, 40);
+			font-size: 1.1rem;
+			font-weight: 300;
+		}
+	}
+}
+
+.fonctionnement {
+	margin-top: 3rem;
+	padding-left: 1rem;
+	font-weight: 900;
+}

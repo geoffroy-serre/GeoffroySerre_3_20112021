@@ -1,0 +1,16 @@
+button {
+	margin-top: 2rem;
+	padding: 1rem 1rem;
+	border-radius: 50px;
+	border: none;
+	box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.1);
+	background: linear-gradient(
+		175deg,
+		$secondary-color 43%,
+		$primary-color 100%
+	);
+	& > a {
+		font-weight: 500;
+		color: white;
+	}
+}
