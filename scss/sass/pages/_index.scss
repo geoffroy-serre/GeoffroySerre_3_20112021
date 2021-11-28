@@ -1,4 +1,3 @@
-// Home page style
 .localisation {
 	padding: 0.9rem 0;
 	background-color: $gray;
@@ -23,7 +22,8 @@
 
 .welcome {
 	background-color: $light-gray;
-	padding-bottom: 2rem;
+	padding: 0 1.2rem 2rem 1.2rem;
+
 	&__text {
 		padding: 1.5rem 0;
 		display: flex;
@@ -52,20 +52,19 @@
 	& > ol {
 		counter-reset: fonctionnalities;
 		list-style: none;
-
 		margin-top: 1.4rem;
-		li {
+		& > li {
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			justify-content: left;
 			text-align: center;
 			background-color: lighten($gray, 4);
 			font-weight: 500;
 			position: relative;
-			padding: 1.7rem 0;
+			padding: 1.7rem 1.7rem;
 			border-radius: 21px;
 			margin-bottom: 2rem;
-			margin-left: 0.8rem;
+			margin-left: 0.6rem;
 			@include tile-shadow;
 			&::before {
 				display: flex;
@@ -74,14 +73,102 @@
 				counter-increment: fonctionnalities;
 				content: counter(fonctionnalities);
 				position: absolute;
-				left: -0.8rem;
+				left: -0.55rem;
 				background-color: $primary-color;
 				color: white;
+				line-height: 1.5rem;
 				font-size: 0.8rem;
-				height: 20px;
-				width: 20px;
+				height: 1.5rem;
+				width: 1.5rem;
 				border-radius: 50%;
 			}
+			&:hover div i {
+				color: $primary-color;
+			}
+			& > div {
+				display: flex;
+				align-items: baseline;
+				& > i {
+					color: gray;
+					font-size: 1.15rem;
+					padding-right: 1.5rem;
+					transition: color 100ms ease-in-out;
+				}
+			}
 		}
+	}
+}
+
+#restaurants {
+	background-color: $light-gray;
+	padding: 1rem 1.2rem;
+	& h2 {
+		padding: 2rem 0;
+	}
+	& .restaurant:nth-child(-n + 3) {
+		&::before {
+			content: 'Nouveau';
+			position: absolute;
+			background-color: $tertiary-color;
+			color: #008766;
+			font-weight: 500;
+			font-size: 0.9rem;
+			padding: 0.35rem 0.7rem;
+			border-radius: 0.15rem;
+			top: 1rem;
+			right: 1rem;
+		}
+	}
+}
+
+.restaurant {
+	margin-bottom: 2rem;
+	position: relative;
+
+	.restaurant__image {
+		background-color: hsl(145, 99%, 27%);
+		overflow: hidden;
+		border-radius: 1rem 1rem 0 0;
+		height: 10.9rem;
+		& img {
+			width: 100%;
+			height: 10.9rem;
+			object-fit: cover;
+		}
+	}
+
+	&__infos {
+		// background-color: green;
+		display: flex;
+		position: relative;
+		padding: 0.8rem 0;
+		border-radius: 0 0 1.5rem 1.5rem;
+		box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.1);
+
+		& .restaurant-infos__name {
+			padding: 0 1rem;
+			line-height: 1.5rem;
+			& > span {
+				font-size: 1.1rem;
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+@keyframes heart-anim {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes heart-anim-0 {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
 	}
 }
