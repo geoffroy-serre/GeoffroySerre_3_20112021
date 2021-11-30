@@ -77,6 +77,8 @@ body {
 		text-overflow: ellipsis;
 		h3 {
 			font-size: 1.2rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 		p {
 			font-size: 0.9rem;

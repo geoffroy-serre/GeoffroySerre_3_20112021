@@ -473,6 +473,8 @@ body {
 }
 .menu__name h3 {
   font-size: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__name p {
   font-size: 0.9rem;
