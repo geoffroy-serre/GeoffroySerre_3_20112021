@@ -155,7 +155,7 @@ ol {
 }
 
 .header__logo {
-  padding: 1rem 0;
+  padding: 1.2rem 0 0.5rem 0;
   text-align: center;
   background-color: white;
   position: sticky;
@@ -164,7 +164,7 @@ ol {
 }
 .header__logo > .site-name {
   font-family: "Shrikhand", cursive;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 
 footer {
@@ -379,9 +379,21 @@ footer a {
   font-weight: 400;
 }
 
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .image-restaurant {
   height: 20rem;
   width: 100%;
+  position: absolute;
+  z-index: -1;
 }
 .image-restaurant img {
   width: 100%;
@@ -391,12 +403,12 @@ footer a {
 }
 
 #menu-container {
-  position: absolute;
-  top: 18rem;
+  margin-top: 14rem;
   background-color: #eaeaea;
   width: 100%;
   border-radius: 3rem 3rem 0 0;
   padding: 1rem 1.2rem;
+  z-index: 1;
 }
 
 .menu-header {
@@ -411,6 +423,9 @@ footer a {
 .menu h2 {
   font-size: 1rem;
   font-weight: 400;
+}
+.menu__service {
+  margin-top: 3rem;
 }
 .menu__recipe {
   margin-top: 1rem;
@@ -507,10 +522,11 @@ footer a {
     opacity: 1;
   }
 }
-footer {
-  position: fixed;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.order {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.forfooter {
+  position: relative;
 }

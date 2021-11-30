@@ -1,6 +1,6 @@
 .header {
 	&__logo {
-		padding: 1rem 0;
+		padding: 1.2rem 0 0.5rem 0;
 		text-align: center;
 		background-color: white;
 		position: sticky;
@@ -9,7 +9,7 @@
 
 		& > .site-name {
 			@include ohmyfood-police;
-			font-size: 1.8rem;
+			font-size: 1.9rem;
 		}
 	}
 }
