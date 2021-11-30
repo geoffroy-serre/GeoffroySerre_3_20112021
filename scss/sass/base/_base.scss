@@ -3,6 +3,7 @@
 	padding: 0;
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
+	user-select: none;
 }
 a {
 	text-decoration: none;
@@ -12,4 +13,8 @@ a {
 h2 {
 	font-size: 1.5rem;
 	font-weight: 700;
+}
+ul,
+ol {
+	list-style: none;
 }

@@ -1,5 +1,5 @@
 .heart {
-	padding: 0 1rem;
+	margin: 0 1rem;
 	z-index: 1;
 
 	&:hover .fas {
@@ -10,6 +10,7 @@
 		opacity: 0;
 	}
 	& .fa-heart {
+		padding: 0 1px;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);

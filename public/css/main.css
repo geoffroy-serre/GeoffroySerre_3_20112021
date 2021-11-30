@@ -4,6 +4,10 @@
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 a {
@@ -14,6 +18,11 @@ a {
 h2 {
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 .link-as-button {
@@ -38,7 +47,7 @@ h2 {
 }
 
 .heart {
-  padding: 0 1rem;
+  margin: 0 1rem;
   z-index: 1;
 }
 .heart:hover .fas {
@@ -50,6 +59,7 @@ h2 {
   opacity: 0;
 }
 .heart .fa-heart {
+  padding: 0 1px;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -74,6 +84,76 @@ h2 {
   transition: opacity 450ms linear;
 }
 
+.green-line {
+  background-color: #99e2d0;
+  width: 2.6rem;
+  height: 3px;
+  margin: 5px 0;
+}
+
+.menu__service li:nth-child(1) {
+  -webkit-animation: 500ms linear 170ms show-recipe;
+          animation: 500ms linear 170ms show-recipe;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.menu__service li:nth-child(2) {
+  -webkit-animation: 500ms linear 340ms show-recipe;
+          animation: 500ms linear 340ms show-recipe;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.menu__service li:nth-child(3) {
+  -webkit-animation: 500ms linear 510ms show-recipe;
+          animation: 500ms linear 510ms show-recipe;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.menu__service li:nth-child(4) {
+  -webkit-animation: 500ms linear 680ms show-recipe;
+          animation: 500ms linear 680ms show-recipe;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.menu__service li:nth-child(5) {
+  -webkit-animation: 500ms linear 850ms show-recipe;
+          animation: 500ms linear 850ms show-recipe;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.menu__service li:nth-child(6) {
+  -webkit-animation: 500ms linear 1020ms show-recipe;
+          animation: 500ms linear 1020ms show-recipe;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.menu__service li:nth-child(7) {
+  -webkit-animation: 500ms linear 1190ms show-recipe;
+          animation: 500ms linear 1190ms show-recipe;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.menu__service li:nth-child(8) {
+  -webkit-animation: 500ms linear 1360ms show-recipe;
+          animation: 500ms linear 1360ms show-recipe;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.menu__service li:nth-child(9) {
+  -webkit-animation: 500ms linear 1530ms show-recipe;
+          animation: 500ms linear 1530ms show-recipe;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
 .header__logo {
   padding: 1rem 0;
   text-align: center;
@@ -93,13 +173,10 @@ footer {
   color: white;
 }
 footer h2 {
-  font-family: Shrikhand;
+  font-family: "Shrikhand", cursive;
   font-weight: 200;
   font-size: 1.2rem;
   padding-bottom: 1.2rem;
-}
-footer > ul {
-  list-style: none;
 }
 footer > ul > li {
   line-height: 1.5rem;
@@ -183,7 +260,6 @@ footer a {
 }
 .fonctionnement > ol {
   counter-reset: fonctionnalities;
-  list-style: none;
   margin-top: 1.4rem;
 }
 .fonctionnement > ol > li {
@@ -303,39 +379,6 @@ footer a {
   font-weight: 400;
 }
 
-@-webkit-keyframes heart-anim {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes heart-anim {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes heart-anim-0 {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes heart-anim-0 {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
 .image-restaurant {
   height: 20rem;
   width: 100%;
@@ -350,7 +393,7 @@ footer a {
 #menu-container {
   position: absolute;
   top: 18rem;
-  background-color: white;
+  background-color: #eaeaea;
   width: 100%;
   border-radius: 3rem 3rem 0 0;
   padding: 1rem 1.2rem;
@@ -361,12 +404,112 @@ footer a {
 }
 .menu-header > h1 {
   font-size: 1.75rem;
-  font-family: Shrikhand;
-  font-weight: 550;
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
 }
 
+.menu h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.menu__recipe {
+  margin-top: 1rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  -webkit-animation-name: show-recipe;
+          animation-name: show-recipe;
+}
+.menu__recipe:hover .choose-dish {
+  width: 4.5rem;
+  opacity: 1;
+}
+.menu__price {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-weight: bold;
+  height: 100%;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: flex;
+  padding: 0.8rem;
+}
+.menu__name {
+  padding: 0.8rem 0 0.8rem 0.8rem;
+  width: 85%;
+  line-height: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__name h3 {
+  font-size: 1.2rem;
+}
+.menu__name p {
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .choose-dish {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #99e2d0;
+  border-radius: 0 1rem 1rem 0;
+  color: white;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 1.4rem;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  opacity: 0;
+  width: 0;
+  height: 4.59rem;
+  -webkit-transition: opacity 200ms ease-in-out, width 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out, width 200ms ease-in-out;
+}
+
+@-webkit-keyframes show-recipe {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-recipe {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 footer {
-  position: absolute;
+  position: fixed;
+  top: auto;
   bottom: 0;
   left: 0;
   right: 0;

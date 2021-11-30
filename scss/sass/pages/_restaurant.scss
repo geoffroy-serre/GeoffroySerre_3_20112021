@@ -12,26 +12,99 @@
 #menu-container {
 	position: absolute;
 	top: 18rem;
-	background-color: white;
+	background-color: $gray;
 	width: 100%;
 	border-radius: 3rem 3rem 0 0;
 	padding: 1rem 1.2rem;
-}
-
-.menu {
 }
 .menu-header {
 	position: relative;
 
 	> h1 {
 		font-size: 1.75rem;
-		font-family: Shrikhand;
-		font-weight: 550;
+		@include ohmyfood-police;
+		font-weight: 500;
+	}
+}
+
+.menu {
+	h2 {
+		font-size: 1rem;
+		font-weight: 400;
+	}
+	&__recipe {
+		margin-top: 1rem;
+		background-color: white;
+		display: flex;
+		align-items: flex-end;
+		border-radius: 1rem;
+		box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+		overflow: hidden;
+		animation-name: show-recipe;
+
+		&:hover .choose-dish {
+			width: 4.5rem;
+			opacity: 1;
+		}
+	}
+	&__price {
+		width: 20%;
+		display: flex;
+		justify-content: flex-end;
+		font-weight: bold;
+		height: 100%;
+		align-items: baseline;
+		display: flex;
+		padding: 0.8rem;
+	}
+	&__name {
+		padding: 0.8rem 0 0.8rem 0.8rem;
+		width: 85%;
+		line-height: 1.5rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		h3 {
+			font-size: 1.2rem;
+		}
+		p {
+			font-size: 0.9rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+	.choose-dish {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $tertiary-color;
+		border-radius: 0 1rem 1rem 0;
+		color: white;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		font-size: 1.4rem;
+
+		transform-origin: right;
+		opacity: 0;
+		width: 0;
+		height: 4.59rem;
+		transition: opacity 200ms ease-in-out, width 200ms ease-in-out;
+	}
+}
+
+@keyframes show-recipe {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
 
 footer {
-	position: absolute;
+	position: fixed;
+	top: auto;
 	bottom: 0;
 	left: 0;
 	right: 0;

@@ -1,0 +1,6 @@
+@for $i from 1 through $dishes {
+	.menu__service li:nth-child(#{$i}) {
+		animation: 500ms linear 170ms * $i show-recipe;
+		animation-fill-mode: both;
+	}
+}
