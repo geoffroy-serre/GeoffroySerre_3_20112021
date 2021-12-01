@@ -5,6 +5,14 @@ body {
 	flex-direction: column;
 }
 
+.fa-arrow-left {
+	position: absolute;
+	top: 1.9rem;
+	left: 1rem;
+	z-index: 1;
+	font-size: 1.3rem;
+}
+
 .image-restaurant {
 	height: 20rem;
 	width: 100%;
@@ -29,9 +37,11 @@ body {
 	position: relative;
 
 	> h1 {
+		display: inline-block;
 		font-size: 1.75rem;
 		@include ohmyfood-police;
 		font-weight: 500;
+		width: calc(100% - 50px);
 	}
 }
 
@@ -51,6 +61,7 @@ body {
 		border-radius: 1rem;
 		box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
 		overflow: hidden;
+
 		animation-name: show-recipe;
 
 		&:hover .choose-dish {
@@ -107,19 +118,27 @@ body {
 }
 
 @keyframes show-recipe {
-	from {
+	0% {
+		transform-origin: top;
+		transform: scaleY(0);
 		opacity: 0;
 	}
-	to {
+	50% {
+		transform-origin: top;
+		opacity: 0.3;
+	}
+	80% {
+		transform-origin: top;
+		opacity: 0.5;
+	}
+	100% {
+		transform-origin: top;
 		opacity: 1;
+		transform: scaleY(1);
 	}
 }
 
 .order {
 	margin: 3rem 0;
 	text-align: center;
-}
-
-.forfooter {
-	position: relative;
 }

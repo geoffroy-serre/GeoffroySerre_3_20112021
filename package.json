@@ -1,0 +1,22 @@
+{
+	"name": "ohmyfood",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build:scss": "sass ./scss/main.scss:./public/css/main.min.css --style compressed",
+		"prefix": " npm run build:scss && postcss ./public/css/main.min.css --use autoprefixer -d ./public/css/",
+		"start": "onchange \"scss/**/*.scss\" -- npm run prefix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/geoffroy-serre/GeoffroySerre_3_20112021.git"
+	},
+	"author": "Geff",
+	"license": "ISC",
+	"browserslist": "last 4 versions",
+	"bugs": {
+		"url": "https://github.com/geoffroy-serre/GeoffroySerre_3_20112021/issues"
+	},
+	"homepage": "https://github.com/geoffroy-serre/GeoffroySerre_3_20112021#readme"
+}

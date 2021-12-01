@@ -25,6 +25,96 @@ ol {
   list-style: none;
 }
 
+.loader {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  font-size: 3rem;
+  font-family: "Shrikhand", cursive;
+  -webkit-animation: fade-out 3s linear both;
+          animation: fade-out 3s linear both;
+  overflow: hidden;
+}
+.loader::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  height: 150px;
+  width: 150px;
+  border: 10px solid #9356dc;
+  border-radius: 50%;
+}
+.loader::after {
+  position: absolute;
+  content: "";
+  background-color: white;
+  height: 220px;
+  width: 80px;
+  z-index: -1;
+  -webkit-animation: 800ms linear 0s 4 alternate both running spinner;
+          animation: 800ms linear 0s 4 alternate both running spinner;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes fade-out {
+  90% {
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    display: hidden;
+  }
+}
+@keyframes fade-out {
+  90% {
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    display: hidden;
+  }
+}
 .link-as-button {
   margin-top: 2rem;
   padding: 1rem 1rem;
@@ -92,64 +182,46 @@ ol {
 }
 
 .menu__service li:nth-child(1) {
-  -webkit-animation: 500ms linear 170ms show-recipe;
-          animation: 500ms linear 170ms show-recipe;
+  -webkit-animation: 400ms ease-in-out 200ms show-recipe;
+          animation: 400ms ease-in-out 200ms show-recipe;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .menu__service li:nth-child(2) {
-  -webkit-animation: 500ms linear 340ms show-recipe;
-          animation: 500ms linear 340ms show-recipe;
+  -webkit-animation: 400ms ease-in-out 400ms show-recipe;
+          animation: 400ms ease-in-out 400ms show-recipe;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
 .menu__service li:nth-child(3) {
-  -webkit-animation: 500ms linear 510ms show-recipe;
-          animation: 500ms linear 510ms show-recipe;
+  -webkit-animation: 400ms ease-in-out 600ms show-recipe;
+          animation: 400ms ease-in-out 600ms show-recipe;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
-.menu__service li:nth-child(4) {
-  -webkit-animation: 500ms linear 680ms show-recipe;
-          animation: 500ms linear 680ms show-recipe;
+.menu__service:nth-child(1) h2,
+.menu__service:nth-child(1) .green-line {
+  -webkit-animation: 200ms linear 150ms show-recipe;
+          animation: 200ms linear 150ms show-recipe;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
-.menu__service li:nth-child(5) {
-  -webkit-animation: 500ms linear 850ms show-recipe;
-          animation: 500ms linear 850ms show-recipe;
+.menu__service:nth-child(2) h2,
+.menu__service:nth-child(2) .green-line {
+  -webkit-animation: 200ms linear 150ms show-recipe;
+          animation: 200ms linear 150ms show-recipe;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
-.menu__service li:nth-child(6) {
-  -webkit-animation: 500ms linear 1020ms show-recipe;
-          animation: 500ms linear 1020ms show-recipe;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-.menu__service li:nth-child(7) {
-  -webkit-animation: 500ms linear 1190ms show-recipe;
-          animation: 500ms linear 1190ms show-recipe;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-.menu__service li:nth-child(8) {
-  -webkit-animation: 500ms linear 1360ms show-recipe;
-          animation: 500ms linear 1360ms show-recipe;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-.menu__service li:nth-child(9) {
-  -webkit-animation: 500ms linear 1530ms show-recipe;
-          animation: 500ms linear 1530ms show-recipe;
+.menu__service:nth-child(3) h2,
+.menu__service:nth-child(3) .green-line {
+  -webkit-animation: 200ms linear 150ms show-recipe;
+          animation: 200ms linear 150ms show-recipe;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -389,6 +461,14 @@ body {
           flex-direction: column;
 }
 
+.fa-arrow-left {
+  position: absolute;
+  top: 1.9rem;
+  left: 1rem;
+  z-index: 1;
+  font-size: 1.3rem;
+}
+
 .image-restaurant {
   height: 20rem;
   width: 100%;
@@ -415,9 +495,11 @@ body {
   position: relative;
 }
 .menu-header > h1 {
+  display: inline-block;
   font-size: 1.75rem;
   font-family: "Shrikhand", cursive;
   font-weight: 500;
+  width: calc(100% - 50px);
 }
 
 .menu h2 {
@@ -508,27 +590,59 @@ body {
 }
 
 @-webkit-keyframes show-recipe {
-  from {
+  0% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
     opacity: 0;
   }
-  to {
+  50% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0.3;
+  }
+  80% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
     opacity: 1;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 
 @keyframes show-recipe {
-  from {
+  0% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
     opacity: 0;
   }
-  to {
+  50% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0.3;
+  }
+  80% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform-origin: top;
+            transform-origin: top;
     opacity: 1;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 .order {
   margin: 3rem 0;
   text-align: center;
-}
-
-.forfooter {
-  position: relative;
 }

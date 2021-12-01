@@ -1,0 +1,16 @@
+$count: 1;
+
+@for $i from 1 through 3 {
+	.menu__service li:nth-child(#{$i}) {
+		animation: 400ms ease-in-out 200ms * $i show-recipe;
+		animation-fill-mode: both;
+	}
+}
+
+@for $i from 1 through 3 {
+	.menu__service:nth-child(#{$i}) h2,
+	.menu__service:nth-child(#{$i}) .green-line {
+		animation: 200ms linear 150ms show-recipe;
+		animation-fill-mode: both;
+	}
+}

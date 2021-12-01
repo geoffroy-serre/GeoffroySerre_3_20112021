@@ -1,0 +1,13 @@
+body {
+	overflow: hidden;
+	animation: reset-overflow 3s both linear;
+}
+
+@keyframes reset-overflow {
+	90% {
+		overflow: hidden;
+	}
+	100% {
+		overflow: visible;
+	}
+}
