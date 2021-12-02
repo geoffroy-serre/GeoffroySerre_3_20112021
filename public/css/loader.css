@@ -1,6 +1,6 @@
 body {
 	overflow: hidden;
-	animation: reset-overflow 3s both linear;
+	animation: reset-overflow 2900ms both linear;
 }
 
 @keyframes reset-overflow {

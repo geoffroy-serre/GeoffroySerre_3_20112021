@@ -18,5 +18,12 @@
 	"bugs": {
 		"url": "https://github.com/geoffroy-serre/GeoffroySerre_3_20112021/issues"
 	},
-	"homepage": "https://github.com/geoffroy-serre/GeoffroySerre_3_20112021#readme"
+	"homepage": "https://github.com/geoffroy-serre/GeoffroySerre_3_20112021#readme",
+	"devDependencies": {
+		"autoprefixer": "^10.4.0",
+		"onchange": "^7.1.0",
+		"postcss": "^8.4.4",
+		"postcss-cli": "^9.0.2",
+		"sass": "^1.44.0"
+	}
 }

@@ -1,0 +1,112 @@
+@media screen and (min-width: 900px) {
+	// Style for every restaurant pages.
+
+	.fa-arrow-left {
+		display: none;
+	}
+
+	#menu-container {
+		padding: 1rem 10%;
+	}
+	.menu-header {
+		position: relative;
+
+		> h1 {
+			font-size: 2rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	// Style for every restaurant pages.
+
+	#menu-container {
+		padding: 1rem 1%;
+	}
+	.menu-header {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+
+		> h1 {
+			display: inline-block;
+			position: relative;
+			font-size: 2rem;
+		}
+	}
+
+	.menu {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		&__service {
+			width: 32%;
+		}
+		&__name {
+			h3 {
+				font-size: 1.1rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			p {
+				font-size: 0.8rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+		&__recipe {
+			width: 100%;
+			&:hover .choose-dish {
+				transform-origin: right;
+				width: 4.5rem;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	// Style for every restaurant pages.
+
+	#menu-container {
+		padding: 1rem 1%;
+	}
+	.menu-header {
+		position: relative;
+		padding: 0 5%;
+
+		> h1 {
+			font-size: 2rem;
+		}
+		.fa-heart {
+			right: 5%;
+		}
+	}
+
+	.menu {
+		padding: 0 5%;
+		&__service {
+			width: 32%;
+		}
+		&__name {
+			h3 {
+				font-size: 1.1rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			p {
+				font-size: 0.9rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+		&__recipe {
+			width: 100%;
+			&:hover .choose-dish {
+				transform-origin: right;
+				width: 4.5rem;
+				opacity: 1;
+			}
+		}
+	}
+}

@@ -34,6 +34,8 @@ body {
 	z-index: 1;
 }
 .menu-header {
+	display: flex;
+	justify-content: space-between;
 	position: relative;
 
 	> h1 {
@@ -108,7 +110,6 @@ body {
 		top: 0;
 		bottom: 0;
 		font-size: 1.4rem;
-
 		transform-origin: right;
 		opacity: 0;
 		width: 0;

@@ -1,7 +1,10 @@
 .link-as-button {
+	position: relative;
+	display: inline-block;
 	margin-top: 2rem;
 	padding: 1rem 1rem;
 	border-radius: 50px;
+	min-width: 10rem;
 	border: none;
 	box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.1);
 	background: linear-gradient(
@@ -9,11 +12,30 @@
 		$secondary-color 43%,
 		$primary-color 100%
 	);
-	transition: opacity ease-in-out 200ms, box-shadow ease-in-out 200ms;
+	transition: box-shadow ease-in-out 250ms;
 	font-weight: 500;
 	color: white;
+	&::before {
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+
+		border-radius: 50px;
+		color: transparent;
+		content: '';
+
+		background-color: rgb(255, 255, 255);
+		transition: opacity ease-in-out 200ms;
+	}
 	&:hover {
 		box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.25);
-		opacity: 0.93;
+
+		&::before {
+			opacity: 0.1;
+		}
 	}
 }

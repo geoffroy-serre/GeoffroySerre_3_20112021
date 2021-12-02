@@ -1,60 +1,66 @@
-.loader {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 10;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	background-color: white;
-	font-size: 3rem;
-	@include ohmyfood-police;
-	animation: fade-out 3s linear both;
-	overflow: hidden;
+// .loader {
+// 	position: absolute;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	z-index: 10;
+// 	top: 0;
+// 	bottom: 0;
+// 	right: 0;
+// 	left: 0;
+// 	background-color: white;
+// 	font-size: 3rem;
+// 	@include ohmyfood-police;
+// 	animation: fade-out 3s linear both;
+// 	overflow: hidden;
 
-	&::before {
-		position: absolute;
-		z-index: -1;
-		content: '';
-		height: 150px;
-		width: 150px;
-		border: 10px solid $primary-color;
-		border-radius: 50%;
-	}
-	&::after {
-		position: absolute;
-		content: '';
-		background-color: rgb(255, 255, 255);
+// 	&::before {
+// 		position: absolute;
+// 		z-index: -1;
+// 		content: '';
+// 		height: 150px;
+// 		width: 150px;
+// 		border: 10px solid $primary-color;
+// 		border-radius: 50%;
+// 	}
+// 	&::after {
+// 		position: absolute;
+// 		content: '';
+// 		background-color: rgb(255, 255, 255);
 
-		height: 220px;
-		width: 80px;
-		z-index: -1;
-		animation: 800ms linear 0s 4 alternate both running spinner;
-	}
-}
+// 		height: 220px;
+// 		width: 80px;
+// 		z-index: -1;
+// 		animation: 800ms linear 0s 4 alternate both running spinner;
+// 	}
+// }
 
-@keyframes spinner {
-	0% {
-		transform: rotate(0deg);
-	}
-	90% {
-		opacity: 1;
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
+// @keyframes spinner {
+// 	0% {
+// 		transform: rotate(0deg);
+// 	}
+// 	90% {
+// 		opacity: 1;
+// 	}
+// 	100% {
+// 		transform: rotate(360deg);
+// 	}
+// }
 
-@keyframes fade-out {
-	90% {
-		opacity: 1;
-
-		z-index: 10;
-	}
-	100% {
-		opacity: 0;
-		display: hidden;
-	}
-}
+// @keyframes fade-out {
+// 	90% {
+// 		opacity: 1;
+// 		background-color: white;
+// 		transform: scale(1);
+// 	}
+// 	91% {
+// 		background-color: transparent;
+// 		transform: scale(1);
+// 	}
+// 	98% {
+// 		opacity: 0;
+// 	}
+// 	100% {
+// 		transform: scale(0);
+// 	}
+// }
