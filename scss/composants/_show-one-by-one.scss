@@ -1,16 +1,16 @@
-$count: 1;
-
-@for $i from 1 through 3 {
+// Through 4 because one restaurant have 4 starter.
+@for $i from 1 through 4 {
 	.menu__service li:nth-child(#{$i}) {
-		animation: 400ms ease-in-out 200ms * $i show-recipe;
+		animation: $menu_duration ease-in-out $menu_delay * $i show-recipe;
 		animation-fill-mode: both;
 	}
 }
 
+// Through 3 cause there is 3 services: Start dish dessert.
 @for $i from 1 through 3 {
 	.menu__service:nth-child(#{$i}) h2,
 	.menu__service:nth-child(#{$i}) .green-line {
-		animation: 200ms linear 150ms show-recipe;
+		animation: $menu_duration linear 150ms show-recipe;
 		animation-fill-mode: both;
 	}
 }

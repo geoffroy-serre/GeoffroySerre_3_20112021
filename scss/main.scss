@@ -1,15 +1,17 @@
 @import './utils/variables';
 @import './utils/mixins';
 @import './base/base';
-@import './base/base-desktop';
 @import './composants/loader';
 @import './composants/button';
 @import './composants/heart';
 @import './composants/green-line';
 @import './composants/show-one-by-one';
 @import './layout/layout';
-@import './layout/desktop-layout';
 @import './pages/index';
-@import './pages/desktop-index';
 @import './pages/restaurant';
-@import './pages/desktop_restaurant';
+
+// Breakpoints imports
+@import './base/base-breakpoints';
+@import './pages/restaurant-breakpoints';
+@import './pages/index-breakpoints';
+@import './layout/layout-breakpoints';

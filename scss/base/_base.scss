@@ -5,6 +5,11 @@
 	font-family: 'Roboto', sans-serif;
 	user-select: none;
 }
+
+html {
+	scroll-behavior: smooth;
+}
+
 a {
 	text-decoration: none;
 	color: black;
@@ -14,10 +19,8 @@ h2 {
 	font-size: 1.5rem;
 	font-weight: 700;
 }
+
 ul,
 ol {
 	list-style: none;
-}
-html {
-	scroll-behavior: smooth;
 }
